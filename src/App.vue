@@ -1,26 +1,55 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <section class="navbar">
+    <article>
+      <span><router-link to="/" class="router">Post Data</router-link></span>
+      <span><router-link to="/createpost" class="router">Create Post</router-link></span>
+    </article>
+  </section>
+
+  <router-view></router-view>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/v4-shims.min.css" integrity="sha512-p++g4gkFY8DBqLItjIfuKJPFvTPqcg2FzOns2BNaltwoCOrXMqRIOqgWqWEvuqsj/3aVdgoEo2Y7X6SomTfUPA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.navbar{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+    background-color: yellowgreen;
+}
+.navbar article{
+  width: 90%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+.navbar article span{
+  display: inline-block;
+  height: inherit;
+  width: 10%;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 22px 0;
+  font-size: 18px;
+}
+.router{
+  text-decoration: none;
+  color: blue;
+  font-weight: 600;
+}
+.navbar article span:hover{
+  background-color: rgb(99, 215, 91);
 }
 </style>
